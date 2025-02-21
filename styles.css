@@ -5,6 +5,7 @@
 
 .call {
   text-align: center;
+  font-size: 20px;
 }
 
 .button1 {
@@ -29,7 +30,7 @@
 
 body {
  text-align: center;
- background-image: url('background.jpg');
- background-size: 1000px;
+ background-image: url('back.jpg');
+ background-size: 2000px;
  display: inline-block;
 }
