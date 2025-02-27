@@ -7,24 +7,15 @@
       background-image: url('back.jpg');
       background-size: 2000px;
       display: inline-block;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      max-width: 400px; /* Обмежує ширину */
-      width: 90%; 
     }
     .userinput {
       font-size: 23px;
       padding: 15px;
       border-radius: 25px;
       text-align: left;
-      margin-top: 30px;
+      margin-top: 20px;
     }
     .riddle {
-      display: inline-block;
-      padding: 15px;
       font-size: 25px;
       background: linear-gradient(90deg, #4a90e2, #9013);
       padding: 10px;
@@ -36,9 +27,24 @@
       font-size: 30px;
       text-align: center;
     }
-    .button2 {
+    .button1 {
+      position: absolute;
       text-decoration: none;
       color: black;
+      left: 30px;
+      bottom: 15px;
+      font-size: 25px;
+      border: 2px solid #4a90e2;
+      border-radius: 30px;
+      padding: 15px;
+      background: #4a90e2;
+    }
+    .button2 {
+      position: absolute;
+      text-decoration: none;
+      color: black;
+      right: 30px;
+      bottom: 15px;
       font-size: 25px;
       border: 2px solid #4a90e2;
       border-radius: 30px;
@@ -46,6 +52,7 @@
       background: #4a90e2;
     }
     .button3 {
+      position: absolute;
       font-size: 20px;
       left: 15px;
       margin-top: 15px;
@@ -60,12 +67,6 @@
     .result {
       font-size: 18px;
     }
-    @media screen and (max-width: 576px) {
-    .riddle {
-      width: auto;
-      padding: 15px;
-  }
-}
   </style>
 </head>
 <body>
@@ -73,7 +74,7 @@
     <p>Загадка</p>
   </div>
   <div class="riddle">
-    <p>Хто відчиняє ворота без ніг і рук</p>
+    <p>Хто відчиняє двері без рік і ніг</p>
   </div>
   <input class="userinput" placeholder="Відповідь" form="text">
   <div class="result">
@@ -82,7 +83,10 @@
   <button onclick="checkAnswer()" class="button3">
     ПЕРЕВІРИТИ
   </button>
-    <a class="button2" href="Children2.html">
+    <a class="button1" href="Riddle2.html">
+      НАЗАД
+    </a>
+    <a class="button2" href="Children3.html">
       ДАЛІ
     </a>
   <script>
