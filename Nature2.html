@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+  <title>Дитяча загадка один</title>
+  <meta name="viewport" content="width=device-width, initail-scale=1">
+  <style>
+    body {
+      background-image: url('back.jpg');
+      background-size: 2000px;
+      display: inline-block;
+    }
+    .userinput {
+      font-size: 23px;
+      padding: 15px;
+      border-radius: 25px;
+      text-align: left;
+      margin-top: 20px;
+    }
+    .riddle {
+      font-size: 25px;
+      background: linear-gradient(90deg, #4a90e2, #9013);
+      padding: 10px;
+      border: 2px solid #ffff;
+      border-radius: 50px;
+      text-align: center;
+    }
+    .text {
+      font-size: 30px;
+      text-align: center;
+    }
+    .button1 {
+      position: absolute;
+      text-decoration: none;
+      color: black;
+      left: 30px;
+      bottom: 15px;
+      font-size: 25px;
+      border: 2px solid #4a90e2;
+      border-radius: 30px;
+      padding: 15px;
+      background: #4a90e2;
+    }
+    .button2 {
+      position: absolute;
+      text-decoration: none;
+      color: black;
+      right: 30px;
+      bottom: 15px;
+      font-size: 25px;
+      border: 2px solid #4a90e2;
+      border-radius: 30px;
+      padding: 15px;
+      background: #4a90e2;
+    }
+    .button3 {
+      position: absolute;
+      font-size: 20px;
+      left: 15px;
+      margin-top: 15px;
+      background: #4a90e2;
+      border: 2px solid #4a90e2;
+      border-radius: 30px;
+      padding: 15px;
+    }
+    .button3:active {
+      color: #ffff;
+    }
+    .result {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="text">
+    <p>Загадка</p>
+  </div>
+  <div class="riddle">
+    <p>У вікно зазирає, день починає.
+Що це? (Не сонце).</p>
+  </div>
+  <input class="userinput" placeholder="Відповідь" form="text">
+  <div class="result">
+    <p>Відповідь з'явиться тут</p>
+  </div>
+  <button onclick="checkAnswer()" class="button3">
+    ПЕРЕВІРИТИ
+  </button>
+    <a class="button1" href="Riddle2.html">
+      НАЗАД
+    </a>
+    <a class="button2" href="Children3.html">
+      ДАЛІ
+    </a>
+  <script>
+  function checkAnswer() {
+    const correctAnswer = "Світанок";
+    const userinput = document.querySelector(".userinput").value;
+    const resultElement = document.querySelector(".result"); 
+
+
+  if (userinput.trim().toLowerCase() === correctAnswer.toLowerCase()) {
+    resultElement.textContent = "Правильно: Ви відповіли вірно!";
+    resultElement.style.color = "green";
+  } else {
+    resultElement.textContent = "Неправильно: Спробуйте ще раз!";
+    resultElement.style.color = "red"; 
+  }
+}
+  </script>
+</body>
